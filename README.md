@@ -20,7 +20,7 @@ python server.py
 | ---- | --------------- |
 | [GET /tombstone/:tombstone_name](#get-tombstonetombstone_name) | Display a tombstone |
 | [POST /generate_tombstone](#post-generate_tombstone) | Create a new tombstone and return it |
-| [POST /slack_generate_tombstone](#post-slac_generate_tombstone) | Special route to handle a slack slash command to create and return a tombstone |
+| [POST /slack_generate_tombstone](#post-slack_generate_tombstone) | Special route to handle a slack slash command to create and return a tombstone |
 
 ### `GET /tombstone/:tombstone_name`
 
