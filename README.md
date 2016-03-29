@@ -18,9 +18,9 @@ python server.py
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /tombstone/:tombstone_name](/v3_resources/blocks.md#get-usersloginblocks) | Display a tombstone |
-| [POST /generate_tombstone](/v3_resources/blocks.md#put-usersuserblockstarget) | Create a new tombstone and return it |
-| [POST /slack_generate_tombstone](/v3_resources/blocks.md#delete-usersuserblockstarget) | Special route to handle a slack slash command to create and return a tombstone |
+| [GET /tombstone/:tombstone_name](#get-tombstonetombstone_name) | Display a tombstone |
+| [POST /generate_tombstone](#post-generate_tombstone) | Create a new tombstone and return it |
+| [POST /slack_generate_tombstone](#post-slac_generate_tombstone) | Special route to handle a slack slash command to create and return a tombstone |
 
 ### `GET /tombstone/:tombstone_name`
 
