@@ -3,3 +3,55 @@
 Oregon Trail Tombstone Generator as a Service (because why not)
 
 ![example](created_tombstones/oddball_aaron.png)
+
+# Installation and Running
+
+```
+git clone https://github.com/jroyal/OTTGaaS.git
+
+pip install -r requirements.txt
+
+python server.py
+```
+
+# Api
+
+| Endpoint | Description |
+| ---- | --------------- |
+| [GET /tombstone/:tombstone_name](/v3_resources/blocks.md#get-usersloginblocks) | Display a tombstone |
+| [POST /generate_tombstone](/v3_resources/blocks.md#put-usersuserblockstarget) | Create a new tombstone and return it |
+| [POST /slack_generate_tombstone](/v3_resources/blocks.md#delete-usersuserblockstarget) | Special route to handle a slack slash command to create and return a tombstone |
+
+### `GET /tombstone/:tombstone_name`
+
+Retrieves the png tombstone file. If done in the browser it will actually display it.
+
+##### Example Request
+
+```
+curl localhost:5000/tombstone/oddball_aaron > test.png
+
+open test.png
+```
+
+### `POST /generate_tombstone/`
+
+Creates and returns a new tombstone
+
+##### Example Request
+
+```
+curl -X POST http://localhost:5000/generate_tombstone -H "Content-Type: application/json" -d '{"name": "James Royal", "inscription": "Something cliche"}' > test.png
+
+open test.png
+```
+
+### `POST /slack_generate_tombstone/`
+
+A special api endpoint that will handle slack slash command requests. The keywords are `name` and `inscription`
+
+##### Example Slack Slash command
+
+```
+/ottgaas name James Royal inscription Something super cliche
+```
