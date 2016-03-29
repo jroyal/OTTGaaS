@@ -7,7 +7,7 @@ FONT_SIZE = 14
 FONT = ImageFont.truetype("appletext.ttf", FONT_SIZE)
 
 def generate_new_tombstone(name, inscription):
-    img = Image.open("base_tombstone.png")
+    img = Image.open("created_tombstones/base_tombstone.png")
     draw = ImageDraw.Draw(img)
     add_name(draw, name)
     add_inscription(draw, inscription)
