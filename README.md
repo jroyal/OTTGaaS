@@ -55,3 +55,7 @@ A special api endpoint that will handle slack slash command requests. The keywor
 ```
 /ottgaas name James Royal inscription Something super cliche
 ```
+
+---
+
+Based on http://www.oregontrailtombstone.com/. Just wanted to get a little crazy with the *aaS.
